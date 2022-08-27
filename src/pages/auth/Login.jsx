@@ -13,15 +13,22 @@ import { useForm } from "react-hook-form";
 import "./ContainerModal.css";
 
 import { useNavigate } from "react-router-dom";
-import { UserAuth } from "../../context/AuthContext";
+import {
+  UserAuth,
+  signInWithGoogle,
+  signInWithFacebook,
+} from "../../context/AuthContext";
 
 import Copyright from "../../shared/Copyright";
 import { ModalContext } from "../../context/ModalContext";
 import { Alert, Snackbar } from "@mui/material";
+import Chicken from "../Chicken";
+import { Facebook, Google } from "@mui/icons-material";
 
 export default function SignIn({ onClick }) {
   const { login } = UserAuth();
   const { setModal } = ModalContext();
+  const { setModal2 } = ModalContext();
   const [open, setOpen] = useState(false);
   const [snackData, setSnackData] = useState({
     msg: "Login Successfully",
@@ -36,10 +43,22 @@ export default function SignIn({ onClick }) {
       setOpen(true);
       setTimeout(() => {
         setModal("");
-        navigate("/");
+        // navigate("/");
+        if (data.email == "breeze_admin@yahoo.com") {
+          navigate("/");
+          localStorage.setItem("is_admin", "true");
+        } else {
+          navigate("/");
+          localStorage.setItem("is_admin", "false");
+
+          return;
+        }
       }, 1000);
     } catch (error) {
-      setSnackData({ msg: error.message, severity: "error" });
+      setSnackData({
+        msg: "There's a Problem with the data you entered",
+        severity: "error",
+      });
       setOpen(true);
     }
     reset();
@@ -47,6 +66,9 @@ export default function SignIn({ onClick }) {
 
   const handleSwitch = () => {
     setModal("signUp");
+  };
+  const handlePassword = () => {
+    navigate("/forgotpassword");
   };
 
   const {
@@ -56,6 +78,9 @@ export default function SignIn({ onClick }) {
     formState: { errors },
   } = useForm();
 
+  const popOut = () => {
+    setOpen(false);
+  };
   return (
     <>
       <Container
@@ -132,11 +157,32 @@ export default function SignIn({ onClick }) {
             >
               Sign In
             </Button>
+            <Button onClick={signInWithGoogle}>
+              <Google></Google>
+            </Button>
+
+            <Button
+              onClick={() => {
+                signInWithFacebook();
+              }}
+            >
+              <Facebook></Facebook>
+              <Button onClick={popOut}></Button>
+            </Button>
+
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <p className="text-color">
                   I don't have an account?
                   <Button onClick={handleSwitch}>Sign Up</Button>
+                </p>
+              </Grid>
+            </Grid>
+            <Grid container justifyContent="flex-end">
+              <Grid item>
+                <p className="text-color">
+                  Forgot Your Password?
+                  <Button onClick={handlePassword}>Reset Password</Button>
                 </p>
               </Grid>
             </Grid>
