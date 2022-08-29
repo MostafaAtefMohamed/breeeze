@@ -30,12 +30,17 @@ import Bakery from "./pages/Bakery";
 import NotFound from "./pages/NotFound";
 import { AccountProvider } from "./context/AccountContext";
 import { CartProvider } from "react-use-cart";
-import Login1 from "./components/loginandsign/Login1";
-import Regestration1 from "./components/loginandsign/Registeration1";
-import Registeration1 from "./components/loginandsign/Registeration1";
-import LoginTest from "./components/loginandsign/LoginTest";
 import Newlyadded from "./pages/Newlyadded";
-
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import KetoAdmin from "./components/admin/keto/Keto";
+import VeganAdmin from "./components/admin/vegan/Vegan";
+import ChickenAdmin from "./components/admin/chicken/Chicken";
+import SnackAdmin from "./components/admin/snack/Snack";
+import FruitsAdmin from "./components/admin/fruits/Fruits";
+import MeatAdmin from "./components/admin/meat/Meat";
+import BakeAdmin from "./components/admin/bakaries/Bakeries";
+import VegetablesAdmin from "./components/admin/vegetables/Vegetables";
+import HomeAdmin from "./components/admin/home/HomeAdmin";
 function App() {
   return (
     <AuthContextProvider>
@@ -48,7 +53,8 @@ function App() {
               <ScrollArrow />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="breeeze" element={<Home />} />
+                <Route path="/breezestore" element={<Home />} />
+                <Route path="breezestore" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="chicken" element={<Chicken />} />
                 <Route path="supplements" element={<Supplements />} />
@@ -63,8 +69,26 @@ function App() {
                 <Route path="bakery" element={<Bakery />} />
                 <Route path="addedmeal" element={<Newlyadded />} />
                 <Route path="search/:id" element={<Search />} />
-                <Route path="addproduct" element={<Registeration1 />} />
-
+                <Route path="forgotpassword" element={<ForgotPassword />} />
+                {/* <Route path="adminpanel" element={<HomeAdmin />} />
+                <Route path="adminpanel/keto" element={<KetoAdmin />}></Route>
+                <Route path="adminpanel/vegan" element={<VeganAdmin />}></Route>
+                <Route
+                  path="adminpanel/chicken"
+                  element={<ChickenAdmin />}
+                ></Route>
+                <Route path="adminpanel/snack" element={<SnackAdmin />}></Route>
+                <Route
+                  path="adminpanel/fruits"
+                  element={<FruitsAdmin />}
+                ></Route>
+                <Route path="adminpanel/bake" element={<BakeAdmin />}></Route>
+                <Route path="adminpanel/meat" element={<MeatAdmin />}></Route> */}
+                {/* <Route path="/adminpaneltest" element={<HomeAdmin />}></Route> */}
+                <Route
+                  path="adminpaneltest/vegetables"
+                  element={<VegetablesAdmin />}
+                ></Route>
                 <Route
                   path="account"
                   element={
