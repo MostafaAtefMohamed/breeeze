@@ -286,6 +286,7 @@ const Navbar = () => {
               <Link to="/" className="bt-style">
                 Home
               </Link>
+
               <Link to="/contact" className="bt-style">
                 Contact
               </Link>
