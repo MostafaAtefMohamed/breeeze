@@ -53,7 +53,7 @@ function App() {
               <ScrollArrow />
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/breeeze" element={<Home />} />
+                <Route path="/breeeze/" element={<Home />} />
                 <Route path="breeeze" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="chicken" element={<Chicken />} />
