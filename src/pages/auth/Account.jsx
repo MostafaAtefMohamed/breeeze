@@ -221,19 +221,6 @@ export default function Account() {
                 required
               />
             </div>
-            <div className="mt-3">
-              <label htmlFor="password" className="form-label">
-                Password :
-              </label>
-              <input
-                type="password"
-                name="password"
-                className="form-control"
-                placeholder="Password"
-                value={userData.password}
-                required
-              />
-            </div>
 
             <button type="button" className="btn btn-outline-primary my-4">
               Save Changes

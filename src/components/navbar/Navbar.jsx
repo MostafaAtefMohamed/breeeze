@@ -195,7 +195,7 @@ const Navbar = () => {
                     "aria-labelledby": "basic-button",
                   }}
                 >
-                  <div className="row p-3">
+                  <div className="row p-3 w-300">
                     <div className="col-md-4">
                       <div className="">
                         <MenuItem onClick={handleClose}>
