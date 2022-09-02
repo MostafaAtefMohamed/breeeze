@@ -38,7 +38,7 @@ export const Footer = () => {
                     </a>
                   </div>
                   <div className="socialIcon d-flex m-1 justify-content-center align-items-center">
-                    <a href="www.twitter.com/MenoAdel1">
+                    <a href="https://www.twitter.com/MenoAdel1">
                       <BsTwitter />
                     </a>
                   </div>
