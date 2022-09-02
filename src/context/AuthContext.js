@@ -89,8 +89,9 @@ export const signInWithFacebook = () => {
       const lastname = re._tokenResponse.lastName;
       const email = re._tokenResponse.email;
       const photo = re.user.photoURL;
-      console.log("Email is : " + email);
-      console.log("Photo is : " + photo);
+      console.log("Email is " + email);
+      console.log("Photo is " + photo);
+      console.log("First Name " + firstname);
       localStorage.setItem("firstname", firstname);
       localStorage.setItem("lastname", lastname);
       localStorage.setItem("email", email);
@@ -107,8 +108,8 @@ export const signInWithGoogle = () => {
       console.log(re);
       const firstname = re._tokenResponse.firstName;
       const lastname = re._tokenResponse.lastName;
-      const email = re._tokenResponse.email;
-      const photo = re._tokenResponse.photoURL;
+      const email = re.user.email;
+      const photo = re.user.photoURL;
       localStorage.setItem("firstname", firstname);
       localStorage.setItem("lastname", lastname);
       localStorage.setItem("email", email);
