@@ -28,7 +28,7 @@ export const Footer = () => {
               </div>
               <div className="adress mt-3">
                 <p className="fw-bold">our address</p>
-                <p>77 El Nasr Street Maadi, Egypt</p>
+                <p>7 University Stadium St , Menofia, Egypt</p>
               </div>
               <div className="social_container mt-3 ">
                 <div className="social d-flex  ">
@@ -38,7 +38,7 @@ export const Footer = () => {
                     </a>
                   </div>
                   <div className="socialIcon d-flex m-1 justify-content-center align-items-center">
-                    <a href="www.twitter.com">
+                    <a href="www.twitter.com/MenoAdel1">
                       <BsTwitter />
                     </a>
                   </div>
