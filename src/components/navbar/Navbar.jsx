@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
@@ -13,7 +11,6 @@ import { Button, Stack } from "@mui/material";
 import BreakfastDiningIcon from "@mui/icons-material/BreakfastDining";
 import { Link } from "react-router-dom";
 import ReorderIcon from "@mui/icons-material/Reorder";
-
 import { TbMeat } from "react-icons/tb";
 import {
   GiTomato,
@@ -23,8 +20,6 @@ import {
   GiStrongMan,
   GiSugarCane,
   GiBroccoli,
-  GiEgypt,
-  GiNewBorn,
 } from "react-icons/gi";
 import { MdFastfood, MdNoMealsOuline } from "react-icons/md";
 import MenuBar from "./MenuBar";

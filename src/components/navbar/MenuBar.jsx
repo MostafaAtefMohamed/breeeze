@@ -22,8 +22,6 @@ import Search from "./Search";
 import { useCart } from "react-use-cart";
 
 const MenuBar = () => {
-  let { cart } = useContext(CartContext);
-  const { favoritesItems } = useContext(FavoritesContext);
   const { setModal } = ModalContext();
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
